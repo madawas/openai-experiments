@@ -20,7 +20,7 @@ Before running the code, make sure you have the following:
 2. Install the required packages:
 
     ```shell
-    pip install openai python-dotenv
+    pip install openai python-dotenv termcolor
     ```
 
 3. Set up environment variables:

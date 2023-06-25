@@ -1,12 +1,13 @@
 import openai
 from dotenv import dotenv_values
+from termcolor import colored
 
 config = dotenv_values('.env')
 
 openai.api_key = config['API_KEY']
 
 def chat(messages):
-    print(f"Assistant: ", end="")
+    print(colored(f"\nAssistant: \n", "green"), end="")
     complete_response = ""
 
     response = openai.ChatCompletion.create(
@@ -20,13 +21,13 @@ def chat(messages):
         if (not chunk.choices[0].delta):
             break
         content = chunk.choices[0].delta.content
-        print(content, end="", flush=True)
+        print(colored(content, "green"), end="", flush=True)
         complete_response += content
-    print()
+    print("\n")
     return {"role": "assistant", "content": complete_response}
 
 def main():
-    print("Assistant: Hello! I'm a chatbot. How can I help you today?\n")
+    print(colored("Assistant: Hello! I'm a chatbot. How can I help you today?\n", "green"))
 
     messages = [{"role": "system", "content": "You are a helpful conversational chatbot"}]
 
