@@ -39,7 +39,7 @@ Before running the code, make sure you have the following:
 
 #### Usage
 
-1. Navigate to the repository directory
+1. Navigate to the `<repository_home>/chatbot` directory
 
 2. Run the code
 

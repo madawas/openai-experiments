@@ -1,10 +1,7 @@
 import openai
-from dotenv import dotenv_values
+import os
+from dotenv import load_dotenv
 from termcolor import colored
-
-config = dotenv_values('.env')
-
-openai.api_key = config['API_KEY']
 
 def chat(messages):
     print(colored(f"\nAssistant: \n", "green"), end="")
@@ -41,4 +38,6 @@ def main():
             break;
 
 if __name__ == "__main__":
+    load_dotenv(dotenv_path="../.env")
+    openai.api_key = os.getenv("API_KEY")
     main()
