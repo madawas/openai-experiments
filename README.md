@@ -51,3 +51,18 @@ python chatbot.py
     - The chatbot will greet you with an introductory message.
     - Enter your messages and press Enter to receive responses from the chatbot.
     - To exit the chatbot, press Ctrl+C.
+
+### Code Reviewer
+
+This is a basic interactive code reviewer based on command line. This takes a code file as an argument and provides 
+suggestions to improve the code quality and fixes bugs.
+
+#### Usage
+
+1. Navigate to the `<repository_home>/code_reviewer` directory
+
+2. Run the code
+
+```shell
+python reviewer.py <input_file_path>
+```
